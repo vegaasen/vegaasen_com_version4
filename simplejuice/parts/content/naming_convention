@@ -1,0 +1,4 @@
+# Please use
+# N_type.php
+# The foreach on index.php will print out stuff as it finds it.
+# ...So if you want to order it, keep the 1, 2, 3 etc..

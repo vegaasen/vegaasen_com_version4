@@ -1,0 +1,89 @@
+/*
+    Todo: Move to the less when less supports mQueries as I want to have!
+    Sorting: highest DESC
+*/
+@media screen and (max-width:1050px) {
+    #top-menu nav {
+        width: 100% !important;
+        font-size: 0.8em;
+    }
+    #contact {
+        padding: 150px 0 !important;
+    }
+}
+@media screen and (max-width:815px) {
+    #top-menu nav {
+        width: 100% !important;
+    }
+    #who {
+        width: 95%;
+        margin-top: 50px;
+        margin: 150px auto;
+    }
+    #contact {
+        padding: 150px 0 !important;
+    }
+    .subtracked {
+        width: 90%;
+    }
+}
+@media screen and (max-width:480px) {
+    .section {
+        margin: 50px 0;
+        font-size: 0.9em;
+    }
+    #top-menu nav {
+        width: 100%;
+    }
+    .grouped li a {
+        padding: 0;
+    }
+    .grouped li {
+        font-size: 0.6em;
+    }
+    .groups .group {
+        padding: 7px 0 0px 0;
+    }
+    .groups .group h2 {
+        font-size: 1em;
+    }
+    .groups .group p {
+        margin: 0 0 5px 0;
+        font-size: 0.9em;
+        font-weight: normal;
+    }
+    .groups .thin .group {
+        padding: 10px 0 0 0;
+    }
+    #who {
+        margin-top: 0;
+        margin: 10px auto;
+        width: 100%;
+    }
+    #who .header h1 {
+        font-size: 1.1em;
+    }
+    #who .social ul li {
+        font-size: 0.7em;
+    }
+    .subtracked {
+        width: auto;
+        padding: 0 20px;
+    }
+    #slides {
+        width: 95%;
+        max-width: 95%;
+    }
+    #slides .container .slides_control .slide {
+        width: 392px;
+    }
+    #slides .container .slides_control .slide .wrapper > a img {
+        max-height: 28%;
+    }
+    #slides .container .slides_control .slide .caption {
+        max-width: 60%;
+    }
+    #contact {
+        padding: 60px 0;
+    }
+}

@@ -1,0 +1,12 @@
+# Über simple theme that is also very responsive
+# Main focus is to get everything running with as low footprint as possible.
+# The current site weights in at 300kb. This must be downsized to at least 100kb when displaying
+# 15 Wordpress articles with mini images (cached?)
+# Must also be fully responsive designed.
+#
+#
+# @author Vegard Aasen
+# @started January 2013
+# @updated
+# @completed
+# @version 0.1-Alpha

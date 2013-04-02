@@ -8,7 +8,7 @@
             </section>
             <section class="group">
                 <h2>Location</h2>
-                <p>From Norway. Born in beautiful (but rather rainy) <a href="http://goo.gl/NHdn6" target="_blank">Odda, Hordaland</a>. Currently living in <a href="http://goo.gl/evbkX" target="_blank">Ringerike, Buskerud</a>.</p>
+                <p>From <span class="bold">Norway</span>. Born in beautiful (but rather rainy) <a href="http://goo.gl/NHdn6" target="_blank">Odda, Hordaland</a>. Currently living in <a href="http://goo.gl/evbkX" target="_blank">Ringerike, Buskerud</a>.</p>
             </section>
             <section class="group">
                 <h2>Education</h2>
@@ -17,7 +17,7 @@
             </section>
             <section class="group">
                 <h2>Work status</h2>
-                <p>Working as a System Developer with many of the security solutions at <a href="http://www.telenor.no/" target="_blank">Telenor Norge ASA</a>. The current focus is Mine Sider, internal architecture with SAML and Min Bedrift. Working mostly with J2ee, Spring, jax-rs/-ws, saml and similar technologies.</p>
+                <p>Working as a <span class="bold">System Developer</span> with many of the security solutions at <a href="http://www.telenor.no/" target="_blank">Telenor Norge ASA</a>. The current focus is Mine Sider, internal architecture with SAML and Min Bedrift. Working mostly with J2ee, Spring, jax-rs/-ws, saml and similar technologies.</p>
             </section>
             <section class="group">
                 <h2>Interests</h2>

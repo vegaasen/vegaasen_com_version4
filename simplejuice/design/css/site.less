@@ -22,7 +22,6 @@
   font-weight: normal;
   font-style: normal;
 }
-/*Defaults*/
 
 @default-font:  Arial, Helvetica, sans-serif;
 @default-aller_light-font: 'aller_lightregular', Arial, Helvetica, sans-serif;
@@ -30,6 +29,11 @@
 @default-color: #575757;
 @default-anchor-color: #377CFC;
 @space-guy-color: #aaa;
+@default-darker-section-color: rgb(112, 112, 112);
+
+.font-aller {
+  font-family: 'aller_lightregular', Arial, Helvetica, sans-serif;
+}
 
 /*Variables*/
 .rounded-corners (@radius: 4px) {
@@ -64,6 +68,28 @@
 
 .box-shadow {
   box-shadow: 0px 0px 13px #000, 0 0 3px #000;
+}
+
+.long-button {
+  .buttonized(60px, 10px, #141414, rgb(75, 75, 75), 1.5em);
+}
+
+.buttonized (@width, @height, @color, @hoverColor, @fontSize) {
+  padding: @height @width;
+  background-color: @color;
+  .rounded-corners(20px);
+  font-size: @fontSize;
+  .cursor.pointer;
+  .transition-all-medium;
+  &:hover {
+    background-color: @hoverColor;
+  }
+}
+
+.cursor {
+  &.help {cursor: help;}
+  &.pointer {cursor: pointer;}
+  &.default {cursor: default;}
 }
 
 .full-width {
@@ -105,16 +131,26 @@
   margin-bottom: 0;
 }
 
+.break-word {
+  word-break: break-all;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .left {
   float: left;
-  text-align: left;
+  .text-left;
 }
 
 .right {
   float: right;
 }
-
-/* DOM-Elements */
 
 .quote {
   &.continue {
@@ -126,13 +162,22 @@
     &:after {content:' „';}
   }
 }
+
 .quotee:before {
   content: " — ";
 }
 
 .section {
-  margin: 150px 0;
-  @media screen and (max-width:480px) {margin: 50px 0;font-size: 0.9em;}
+  padding: 150px 0;
+  @media screen and (max-width:480px) {margin: 50px 0;font-size: 0.9em;};
+  &.darker {
+    background-color: @default-darker-section-color;
+    color: rgb(221, 221, 221);
+    a {
+      color: rgb(255, 255, 255);
+      &:hover {color: rgb(221, 221, 221) !important;}
+    }
+  }
 }
 
 .subtracked {
@@ -163,6 +208,18 @@ a {
   text-decoration: none;
   &:hover {color: @default-anchor-color !important;}
   &.active{color: @default-anchor-color !important;}
+}
+
+.container {
+  &.boxed {
+    padding: 40px;
+    background-color: rgb(209, 121, 109);
+    .rounded-corners;
+    .transition-all-medium;
+    &:hover {
+      color: #fff;
+    }
+  }
 }
 
 #top-menu {
@@ -444,6 +501,9 @@ a {
       visibility: hidden;
     }
   }
+  &.no-border {
+    .group {border-top: 0 none transparent;}
+  }
   &.thin {
     .group {
       font-size: 0.8em;
@@ -454,6 +514,18 @@ a {
       }
       p {
         font-weight: normal;
+      }
+    }
+  }
+  &.magnetic {
+    .group {
+      padding: 0;
+      h2 {
+        width: 18%;
+      }
+      p {
+        width: 82%;
+        margin: 10px 0 0 0;
       }
     }
   }
@@ -472,6 +544,10 @@ a {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.1), 0px 1px 6px rgba(0, 0, 0, 0.1), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
+    &.no-border {
+      border-top: 0 none transparent;
+      border-bottom: 0 none transparent;
+    }
   }
   &.white {background-color: #ffffff;}
 }
@@ -544,7 +620,7 @@ a {
             width: auto;
             @media screen and (max-width:480px) {max-width: 60%;};
             h2 {
-              word-break: break-all;
+              .break-word;
               font-size: 1.3em;
               font-family: @font-georgia-family;
             }
@@ -583,46 +659,58 @@ a {
   }
 }
 
-//Cool elements
-
-.space-guy{
-
-  box-shadow:
-    0 0 0 1em @space-guy-color,
-    0 1em 0 1em @space-guy-color,
-    -2.5em 1.5em 0 .5em @space-guy-color,
-    2.5em 1.5em 0 .5em @space-guy-color,
-      -3em -3em 0 0 @space-guy-color,
-      3em -3em 0 0 @space-guy-color,
-      -2em -2em 0 0 @space-guy-color,
-      2em -2em 0 0 @space-guy-color,
-      -3em -1em 0 0 @space-guy-color,
-      -2em -1em 0 0 @space-guy-color,
-      2em -1em 0 0 @space-guy-color,
-      3em -1em 0 0 @space-guy-color,
-    -4em 0 0 0 @space-guy-color,
-    -3em 0 0 0 @space-guy-color,
-    3em 0 0 0 @space-guy-color,
-    4em 0 0 0 @space-guy-color,
-    -5em 1em 0 0 @space-guy-color,
-    -4em 1em 0 0 @space-guy-color,
-    4em 1em 0 0 @space-guy-color,
-    5em 1em 0 0 @space-guy-color,
-    -5em 2em 0 0 @space-guy-color,
-    5em 2em 0 0 @space-guy-color,
-    -5em 3em 0 0 @space-guy-color,
-    -3em 3em 0 0 @space-guy-color,
-    3em 3em 0 0 @space-guy-color,
-    5em 3em 0 0 @space-guy-color,
-    -2em 4em 0 0 @space-guy-color,
-    -1em 4em 0 0 @space-guy-color,
-    1em 4em 0 0 @space-guy-color,
-    2em 4em 0 0 @space-guy-color;
-  background: @space-guy-color;
-  width: 16px;
-  height: 16px;
+//Cool stuff
+.figure {
   .centered;
   margin-bottom: 100px !important;
+  &.space-guy{
+    box-shadow:
+      0 0 0 1em @space-guy-color,
+      0 1em 0 1em @space-guy-color,
+      -2.5em 1.5em 0 .5em @space-guy-color,
+      2.5em 1.5em 0 .5em @space-guy-color,
+        -3em -3em 0 0 @space-guy-color,
+        3em -3em 0 0 @space-guy-color,
+        -2em -2em 0 0 @space-guy-color,
+        2em -2em 0 0 @space-guy-color,
+        -3em -1em 0 0 @space-guy-color,
+        -2em -1em 0 0 @space-guy-color,
+        2em -1em 0 0 @space-guy-color,
+        3em -1em 0 0 @space-guy-color,
+      -4em 0 0 0 @space-guy-color,
+      -3em 0 0 0 @space-guy-color,
+      3em 0 0 0 @space-guy-color,
+      4em 0 0 0 @space-guy-color,
+      -5em 1em 0 0 @space-guy-color,
+      -4em 1em 0 0 @space-guy-color,
+      4em 1em 0 0 @space-guy-color,
+      5em 1em 0 0 @space-guy-color,
+      -5em 2em 0 0 @space-guy-color,
+      5em 2em 0 0 @space-guy-color,
+      -5em 3em 0 0 @space-guy-color,
+      -3em 3em 0 0 @space-guy-color,
+      3em 3em 0 0 @space-guy-color,
+      5em 3em 0 0 @space-guy-color,
+      -2em 4em 0 0 @space-guy-color,
+      -1em 4em 0 0 @space-guy-color,
+      1em 4em 0 0 @space-guy-color,
+      2em 4em 0 0 @space-guy-color;
+    background: @space-guy-color;
+    width: 16px;
+    height: 16px;
+  }
+  &.pacman {
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid @space-guy-color;
+    border-left: 60px solid @space-guy-color;
+    border-bottom: 60px solid @space-guy-color;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
 
 #blogroll {
@@ -638,4 +726,8 @@ footer {
   font-size: 0.6em;
   cursor: default;
   z-index: -10;
+}
+
+.footer {
+  margin-top: 30px;
 }

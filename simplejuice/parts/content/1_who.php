@@ -1,6 +1,6 @@
 <section id="who" class="section whoami scrollto animated bounceInUp">
     <div class="centered header">
-        <div class="space-guy"></div>
+        <div class="figure space-guy"></div>
         <h1>I'm Vegard Aasen, a full time System Developer currently working for Telenor Norge ASA with Security solutions. Main interests is cars, games and programming languages &mdash; and relaxation.</h1>
     </div>
     <div class="social">

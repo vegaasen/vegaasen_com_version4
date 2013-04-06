@@ -42,4 +42,13 @@ jQuery(document).ready(function() {
     }, {
         offset: '1300px' /*Stupid scroller..*/
     });
+    jQuery(".contact-link").click(function() {
+        jQuery.scrollTo(
+            jQuery("#contact"),
+            {
+                duration: 900,
+                offset:{'left':0, 'top':-0.22*jQuery(window).height()}
+            }
+        );
+    });
 });

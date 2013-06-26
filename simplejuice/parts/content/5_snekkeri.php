@@ -36,7 +36,7 @@
             </article>
         </div>
         <div class="footer">
-            <span class="long-button contact-link">Contact &raquo;</span>
+            <span class="long-button contact-link">contact &raquo;</span>
         </div>
     </div>
 </section>
